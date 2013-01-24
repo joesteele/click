@@ -50,18 +50,18 @@ module.exports = function(grunt) {
       build: {
         options: {
           almond: true,
+          dir: "build",
           appDir: "src",
           baseUrl: "js",
           mainConfigFile: 'src/js/main.js',
-          dir: "build",
-          name: "main",
+          modules: [{name: "main"}],
           replaceRequireScript: [{
             files: ["build/index.html"],
             module: "main"
           }],
-          keepBuildDir: false,
           locale: "en-us",
           optimize: "uglify",
+          keepBuildDir: false,
           skipDirOptimize: false,
           generateSourceMaps: false,
           inlineText: true,
