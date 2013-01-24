@@ -75,6 +75,13 @@ module.exports = function(grunt) {
       all: ['test/**/*.html']
     },
 
+    livereload: {
+      files: ['src/css/**/*'],
+      options: {
+        base: 'src'
+      }
+    },
+
     watch: {
       coffee: {
         files: ['src/coffee/**/*.coffee'],
@@ -86,18 +93,21 @@ module.exports = function(grunt) {
       },
       compass: {
         files: ['src/scss/**/*.scss'],
-        tasks: ['compass-clean', 'compass:build']
-      }
+        tasks: ['compass:build']
+      },
     }
+
   });
 
   grunt.loadNpmTasks('grunt-coffee');
   grunt.loadNpmTasks('grunt-compass');
   grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-livereload');
 
   // Default task.
   grunt.registerTask('default', ['coffee:build', 'coffee:tests', 'compass-clean', 'compass:build', 'mocha']);
+  grunt.registerTask('dev', ['livereload', 'watch']);
 
 };
 

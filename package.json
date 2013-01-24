@@ -12,12 +12,12 @@
     "mocha": "latest",
     "chai": "latest",
     "mocha-phantomjs": "latest",
-    "grunt": "latest",
+    "grunt": "0.3.x",
     "grunt-coffee": "latest",
     "grunt-compass": "latest",
     "grunt-requirejs": "latest",
     "grunt-mocha": "0.1.x",
-    "grunt-contrib-watch": "latest"
+    "grunt-livereload": "latest"
   },
   "scripts": {
     "mocha": "node_modules/mocha-phantomjs/bin/mocha-phantomjs test/index.html",
