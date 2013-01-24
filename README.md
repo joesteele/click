@@ -14,12 +14,17 @@ This setup requires Node be installed.
 
 * `npm install` # Installs the project dependencies
 * `npm run-script grunt` # Compile the CoffeeScript/SCSS and run the tests
-* `npm run-script mocha` # Run the tests
 * `npm run-script build` # Build the project
+* `open build/index.html` # Open the built project
+
+### Additional Run Scripts
+* `npm run-script mocha` # Run the tests
 * `npm run-script dev` # Watch for changes and enable LiveReload
 
-It's recommended to install both grunt and mocha globally (`npm install -g grunt && npm install -g mocha`)
+It's recommended to install both Grunt and Mocha globally (`npm install -g grunt && npm install -g mocha`)
 and then run `grunt dev` in a separate terminal window.
+
+See `grunt.js` for additional Grunt tasks
 
 ## Folder Structure
     *build/
