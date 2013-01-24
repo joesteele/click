@@ -50,23 +50,32 @@ module.exports = function(grunt) {
       build: {
         options: {
           almond: true,
+          appDir: "src",
+          baseUrl: "js",
+          mainConfigFile: 'src/js/main.js',
+          dir: "build",
+          name: "main",
           replaceRequireScript: [{
-            files: ['build/index.html'],
-            module: 'main'
+            files: ["build/index.html"],
+            module: "main"
           }],
-          modules: [{name: 'main'}],
-          dir: 'build',
-          appDir: 'src',
-          baseUrl: 'js',
-          paths: {
-            jquery: 'node_modules/jquery-browser/lib/jquery',
-            underscore: 'node_modules/underscore/underscore-min',
-            backbone: 'node_modules/backbone/backbone-min',
-            requirejs: 'node_modules/requirejs/require'
-          },
+          keepBuildDir: false,
+          locale: "en-us",
+          optimize: "uglify",
+          skipDirOptimize: false,
+          generateSourceMaps: false,
+          inlineText: true,
+          useStrict: false,
+          skipPragmas: true,
           skipModuleInsertion: false,
-          optimizeAllPluginResources: true,
-          findNestedDependencies: true
+          optimizeAllPluginResources: false,
+          findNestedDependencies: false,
+          removeCombined: true,
+          fileExclusionRegExp: /(coffee|scss|test)/,
+          preserveLicenseComments: true,
+          logLevel: 0,
+          cjsTranslate: true,
+          useSourceUrl: false
         }
       }
     },
@@ -102,6 +111,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-livereload');
 
   grunt.registerTask('dev', ['livereload', 'watch']);
+  grunt.registerTask('build', ['requirejs:build']);
 
   grunt.registerTask('default', ['coffee:build', 'coffee:tests', 'compass-clean', 'compass:build', 'mocha']);
 
