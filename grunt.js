@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     },
 
     livereload: {
-      files: ['src/css/**/*'],
+      files: ['src/index.html', 'src/css/**/*'],
       options: {
         base: 'src'
       }
@@ -105,9 +105,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha');
   grunt.loadNpmTasks('grunt-livereload');
 
-  // Default task.
-  grunt.registerTask('default', ['coffee:build', 'coffee:tests', 'compass-clean', 'compass:build', 'mocha']);
   grunt.registerTask('dev', ['livereload', 'watch']);
+
+  grunt.registerTask('default', ['coffee:build', 'coffee:tests', 'compass-clean', 'compass:build', 'mocha']);
 
 };
 
