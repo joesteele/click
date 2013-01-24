@@ -1,2 +1,2 @@
 define ->
-  class App
+  class App extends Backbone.Model

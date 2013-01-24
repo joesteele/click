@@ -4,9 +4,15 @@ mocha.setup({
   globals: ['_', 'Backbone', 'app']
 });
 
+requirejs.config({
+  paths: {
+    app: '../src/js/app'
+  },
+});
+
 var self = this;
 require([
-  '../src/js/app',
+  'app',
   'models/sanity_test'
 ], function(App) {
   self.app = new App;

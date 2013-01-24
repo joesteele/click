@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "jquery-browser": "latest",
-    "underscore": "latest",
-    "backbone": "latest",
     "requirejs": "latest"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 src/css/
-src/js/
+src/js/*
+!src/js/lib/
 node_modules/
 build/
 test/*

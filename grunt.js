@@ -62,6 +62,7 @@ module.exports = function(grunt) {
           locale: "en-us",
           optimize: "uglify",
           keepBuildDir: false,
+          wrap: false,
           skipDirOptimize: false,
           generateSourceMaps: false,
           inlineText: true,
@@ -71,7 +72,7 @@ module.exports = function(grunt) {
           optimizeAllPluginResources: false,
           findNestedDependencies: false,
           removeCombined: true,
-          fileExclusionRegExp: /(coffee|scss|test)/,
+          fileExclusionRegExp: /(coffee|scss|test|vendor)/,
           preserveLicenseComments: true,
           logLevel: 0,
           cjsTranslate: true,
@@ -100,6 +101,10 @@ module.exports = function(grunt) {
         files: ['src/scss/**/*.scss'],
         tasks: ['compass:build']
       },
+      tests: {
+        files: ['test/index.html', 'test/runner.js'],
+        tasks: ['mocha']
+      }
     }
 
   });
