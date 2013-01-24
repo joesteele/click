@@ -2,22 +2,6 @@
 A simple skeleton scaffolding of the different frontend components I enjoy working with ready for use.
 
 ## Folder Structure
-    src/
-      scss/
-        main.scss
-      *css/
-      images/
-      *js/
-      coffee/
-        app.coffee
-        main.coffee
-      test/
-        models/
-          sanity_test.coffee
-        index.html
-        runner.coffee
-      index.html
-    *test/
     *build/
       css/
         main.css
@@ -27,6 +11,22 @@ A simple skeleton scaffolding of the different frontend components I enjoy worki
         main.js
       index.html
     *node_modules/
+    src/
+      scss/
+        main.scss
+      *css/
+      images/
+      *js/
+      coffee/
+        app.coffee
+        main.coffee
+      tests/
+        models/
+          sanity_test.coffee
+      index.html
+    test/
+      index.html
+      runner.js
     .gitignore
     package.json
     build.js
