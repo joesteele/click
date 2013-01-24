@@ -2,7 +2,7 @@ src/css/
 src/js/
 node_modules/
 build/
-test/**/*
+test/*
 !test/index.html
 !test/runner.js
 npm-debug.log
