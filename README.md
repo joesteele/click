@@ -11,12 +11,13 @@ A simple skeleton scaffolding of the different frontend components I enjoy worki
       coffee/
         app.coffee
         main.coffee
+      test/
+        models/
+          sanity_test.coffee
+        index.html
+        runner.coffee
       index.html
-    test/
-      models/
-        sanity_test.js
-      index.html
-      runner.js
+    *test/
     *build/
       css/
         main.css

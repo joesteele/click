@@ -2,3 +2,4 @@ src/css/
 src/js/
 node_modules/
 build/
+npm-debug.log

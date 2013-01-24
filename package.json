@@ -1,0 +1,26 @@
+{
+  "name": "Click",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jquery-browser": "latest",
+    "underscore": "latest",
+    "backbone": "latest",
+    "requirejs": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "chai": "latest",
+    "mocha-phantomjs": "latest",
+    "grunt": "latest",
+    "grunt-coffee": "latest",
+    "grunt-compass": "latest",
+    "grunt-requirejs": "latest",
+    "grunt-mocha": "0.1.x",
+    "grunt-contrib-watch": "latest"
+  },
+  "scripts": {
+    "mocha": "node_modules/mocha-phantomjs/bin/mocha-phantomjs test/index.html",
+    "grunt": "node_modules/grunt/bin/grunt"
+  }
+}
