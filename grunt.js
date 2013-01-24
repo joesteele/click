@@ -84,12 +84,8 @@ module.exports = function(grunt) {
 
     watch: {
       coffee: {
-        files: ['src/coffee/**/*.coffee'],
-        tasks: ['coffee:build', 'mocha']
-      },
-      tests: {
-        files: ['src/tests/**/*.coffee'],
-        tasks: ['coffee:tests', 'mocha']
+        files: ['src/coffee/**/*.coffee', 'src/tests/**/*.coffee'],
+        tasks: ['coffee:build', 'coffee:tests', 'mocha']
       },
       compass: {
         files: ['src/scss/**/*.scss'],
