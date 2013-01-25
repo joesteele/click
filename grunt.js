@@ -46,6 +46,13 @@ module.exports = function(grunt) {
       }
     },
 
+    handlebars: {
+      all: {
+        src: 'src/templates',
+        dest: 'src/js/templates.js'
+      }
+    },
+
     requirejs: {
       build: {
         options: {
@@ -101,6 +108,10 @@ module.exports = function(grunt) {
         files: ['src/scss/**/*.scss'],
         tasks: ['compass:build']
       },
+      templates: {
+        files: ['src/templates/**/*'],
+        tasks: ['handlebars']
+      },
       tests: {
         files: ['test/index.html', 'test/runner.js'],
         tasks: ['mocha']
@@ -111,6 +122,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-coffee');
   grunt.loadNpmTasks('grunt-compass');
+  grunt.loadNpmTasks('grunt-handlebars');
   grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks('grunt-mocha');
   grunt.loadNpmTasks('grunt-livereload');
@@ -118,7 +130,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['livereload', 'watch']);
   grunt.registerTask('build', ['requirejs:build']);
 
-  grunt.registerTask('default', ['coffee:build', 'coffee:tests', 'compass-clean', 'compass:build', 'mocha']);
+  grunt.registerTask('default', ['coffee:build', 'coffee:tests', 'compass-clean', 'compass:build', 'handlebars', 'mocha']);
 
 };
 

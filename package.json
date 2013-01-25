@@ -12,6 +12,7 @@
     "grunt": "0.3.x",
     "grunt-coffee": "latest",
     "grunt-compass": "latest",
+    "grunt-handlebars": "latest",
     "grunt-requirejs": "latest",
     "grunt-mocha": "0.1.x",
     "grunt-livereload": "latest"
