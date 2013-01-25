@@ -35,20 +35,23 @@ See `grunt.js` for additional Grunt tasks
         lib/
           core-libs.js
         main.js
+        templates.js
       index.html
     *node_modules/
     src/
-      scss/
-        main.scss
+      coffee/
+        app.coffee
+        main.coffee
       *css/
       images/
       js/
         lib/
           core-libs.js
-        *
-      coffee/
-        app.coffee
-        main.coffee
+        * # Compiled output
+      scss/
+        main.scss
+      templates/
+        app.handlebars
       tests/
         models/
           sanity_test.coffee

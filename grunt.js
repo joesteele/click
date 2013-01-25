@@ -79,7 +79,7 @@ module.exports = function(grunt) {
           optimizeAllPluginResources: false,
           findNestedDependencies: false,
           removeCombined: true,
-          fileExclusionRegExp: /(coffee|scss|test|vendor)/,
+          fileExclusionRegExp: /(coffee|scss|templates\/|test|vendor)/,
           preserveLicenseComments: true,
           logLevel: 0,
           cjsTranslate: true,
