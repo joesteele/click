@@ -5,7 +5,7 @@ working with setup and ready for use.
 Sets up a structure for jQuery, Underscore, and Backbone loaded with RequireJS,
 Handlebars for templates, tested with Mocha, and SCSS used for styles.
 
-The grunt.js file includes tasks to compile the SCSS, CoffeeScript and
+The grunt.js file includes tasks to compile the SCSS, CoffeeScript, and
 Handlebars templates, run the tests, build the project, and watch the files for
 changes to automatically compile them and reload the browser via LiveReload.
 
