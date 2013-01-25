@@ -3,11 +3,11 @@ A simple skeleton scaffolding of the different frontend components I enjoy
 working with setup and ready for use.
 
 Sets up a structure for jQuery, Underscore, and Backbone loaded with RequireJS,
-tested with Mocha, and SCSS used for styles.
+Handlebars for templates, tested with Mocha, and SCSS used for styles.
 
-The grunt.js file includes tasks to compile the SCSS and CoffeeScript, run the
-tests, build the project, and watch the files for changes to automatically
-compile them and reload the browser via LiveReload.
+The grunt.js file includes tasks to compile the SCSS, CoffeeScript and
+Handlebars templates, run the tests, build the project, and watch the files for
+changes to automatically compile them and reload the browser via LiveReload.
 
 ## Usage
 This setup requires Node be installed.
