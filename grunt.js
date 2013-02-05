@@ -49,7 +49,8 @@ module.exports = function(grunt) {
     handlebars: {
       all: {
         src: 'src/templates',
-        dest: 'src/js/templates.js'
+        dest: 'src/js/jst.js',
+        root: 'src/templates'
       }
     },
 
