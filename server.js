@@ -23,7 +23,6 @@ app.use(sass.middleware({
   outputStyle: 'compressed'
 }));
 
-app.use('/js/deps.js', path.join(__dirname, 'src/js/lib/core-libs.js'));
 app.use('/js/build.js', browserify(path.join(__dirname, 'src/js/index.coffee')));
 
 app.use('/', express.static('./public'));
