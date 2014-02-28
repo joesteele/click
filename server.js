@@ -32,5 +32,5 @@ app.get('/', function (req, res) {
   res.render('app');
 });
 
-app.listen(3000);
-console.log('express3-handlebars example server listening on: 3000');
+app.listen(8080);
+console.log('server listening on: 8080');

@@ -1,7 +1,7 @@
 {Handlebars} = require '../../../node_modules/handlebars/dist/handlebars.runtime.min'
 window.Handlebars = Handlebars
 
-require('../jst')
+require '../jst'
 
 class Templates
   @get: (template) ->
