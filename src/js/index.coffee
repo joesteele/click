@@ -1,3 +1,8 @@
+window.$ = window.jQuery = require 'jquery'
+window._ = require 'underscore'
+window.Backbone = require 'backbone'
+Backbone.$ = jQuery
+
 App = require './models/app.coffee'
 AppView = require './views/app_view.coffee'
 
