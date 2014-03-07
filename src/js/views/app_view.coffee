@@ -1,10 +1,4 @@
-Templates = require '../models/templates.coffee'
-
-class AppView extends Backbone.View
-  template: Templates.get('app_view')
-
-  render: ->
-    @$el.html @template?()
-    @
+class AppView extends BaseView
+  template: app.templates.get('app_view')
 
 module.exports = AppView

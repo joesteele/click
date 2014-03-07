@@ -11,7 +11,7 @@ browserify.settings({
 
 app.engine('handlebars', exphbs({
   defaultLayout: 'index',
-  layoutsDir: path.join(__dirname, 'src/templates/layouts'),
+  layoutsDir: path.join(__dirname, 'src/layouts'),
   partialsDir: [path.join(__dirname, 'src/templates/**/*')]
 }));
 app.set('view engine', 'handlebars');
@@ -28,7 +28,7 @@ app.use('/js/build.js', browserify(path.join(__dirname, 'src/js/index.coffee')))
 app.use('/', express.static('./public'));
 
 app.get('/', function (req, res) {
-  res.render('app');
+  res.render('layouts/index');
 });
 
 app.listen(8080);

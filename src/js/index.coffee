@@ -1,16 +1,13 @@
-window.$ = window.jQuery = require 'jquery'
-window._ = require 'underscore'
-window.Backbone = require 'backbone'
-Backbone.$ = jQuery
+require './dependencies.coffee'
 
-App = require './models/app.coffee'
-AppView = require './views/app_view.coffee'
+App = require './app.coffee'
 
-app = new App
-appView = new AppView model: app
-
+app = null
 $(document).on 'ready', ->
-  $('body').append appView.render().el
+  window.app = app = new App
+
+  unless Backbone.history.start(pushState: true)
+    app.navigate '/', true
 
 module.exports = app
 
