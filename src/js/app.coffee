@@ -8,11 +8,11 @@ class App extends Backbone.Router
     '': 'root'
 
   root: ->
-    view = require "./views/app_view.coffee"
+    view = require "./views/root.coffee"
     @render view
 
-  render: (view, data) ->
-    @layout.setContent new view model: data
+  render: (view, options) ->
+    @layout.setContent new view, options
 
   template: (name, data) ->
     template = @templates.get(name)

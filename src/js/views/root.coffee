@@ -1,4 +1,4 @@
 class AppView extends BaseView
-  template: app.templates.get('app_view')
+  template: app.templates.get('root')
 
 module.exports = AppView
