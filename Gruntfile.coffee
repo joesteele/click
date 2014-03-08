@@ -4,7 +4,7 @@ module.exports = (grunt) ->
 
     shell:
       handlebars:
-        command: 'node_modules/.bin/handlebars -r src/templates -m src/templates src/templates/*.handlebars -f src/js/jst.js'
+        command: 'node_modules/.bin/handlebars -r src/templates -m src/templates src/templates/**/*.handlebars -f src/js/jst.js'
         options:
           stdout: true
           stderr: true

@@ -4,3 +4,5 @@ window.Backbone = require 'backbone'
 Backbone.$ = jQuery
 
 window.BaseView = BaseView = require './views/base.coffee'
+
+require 'bootstrap'

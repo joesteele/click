@@ -2,7 +2,6 @@ var express    = require('express'),
     exphbs     = require('express3-handlebars'),
     browserify = require('browserify-middleware'),
     sass       = require('node-sass'),
-    path       = require('path'),
     app        = express();
 
 browserify.settings({
@@ -11,24 +10,32 @@ browserify.settings({
 
 app.engine('handlebars', exphbs({
   defaultLayout: 'index',
-  layoutsDir: path.join(__dirname, 'src/layouts'),
-  partialsDir: [path.join(__dirname, 'src/templates/**/*')]
+  layoutsDir: 'src/layouts',
+  partialsDir: ['src/templates/**/*']
 }));
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, '/src/templates'));
+app.set('views', 'src/templates');
 
 app.use(sass.middleware({
-  src: path.join(__dirname, 'src'),
-  dest: path.join(__dirname, 'public'),
-  outputStyle: 'compressed'
+  src: 'src',
+  dest: 'public',
+  outputStyle: 'compressed',
+  force: true
 }));
 
-app.use('/js/build.js', browserify(path.join(__dirname, 'src/js/index.coffee')));
+app.use('/js/build.js', browserify('src/js/index.coffee'));
 
-app.use('/', express.static('./public'));
+app.use('/fonts', express.static('bower_components/font-awesome/fonts'));
+app.use('/fonts', express.static('bower_components/bootstrap/fonts'));
 
-app.get('/', function (req, res) {
-  res.render('layouts/index');
+app.use('/', express.static('public'));
+
+app.get('/css/bootstrap.min.css', function(req, res) {
+  res.sendfile('bower_components/bootstrap/dist/css/bootstrap.min.css');
+});
+
+app.get('/*', function (req, res) {
+  res.render('layouts/app');
 });
 
 app.listen(8080);

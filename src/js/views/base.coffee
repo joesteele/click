@@ -91,7 +91,8 @@ class BaseView extends Backbone.View
     @parent = null
 
   removeChild: (view) =>
-    @children.splice(index, 1) if _.indexOf(@children, view) isnt -1
+    index = _.indexOf(@children, view)
+    @children.splice(index, 1) if index isnt -1
 
   constructor: ->
     @children = []
