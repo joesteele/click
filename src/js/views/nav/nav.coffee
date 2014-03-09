@@ -3,6 +3,9 @@ class Nav extends BaseView
   className: 'navbar navbar-default navbar-fixed-top'
   tagName: 'nav'
 
+  viewAttrs:
+    title: app.config.name
+
   events:
     'click .nav a': 'navItemClicked'
 

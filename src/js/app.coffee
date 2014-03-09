@@ -4,6 +4,9 @@ class App
   logger: require './utils/logger.coffee'
   templates: require './utils/templates.coffee'
 
+  initialize: ->
+    window.title = @config.name
+
   template: (name, data) ->
     template = @templates.get(name)
     template?(data)
