@@ -1,6 +1,6 @@
 # Click
 A simple frontend skeleton for use in quickly prototyping ideas. Out of the box
-you following are setup for you:
+the following are setup for you:
 - Static server serving all routes to the Backbone app
 - Automatic on the fly SCSS/CoffeeScript compliation
 - Browserify setup for using CommonJS style requires
