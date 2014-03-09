@@ -10,7 +10,7 @@ class Nav extends BaseView
     'click .nav a': 'navItemClicked'
 
   initialize: ->
-    app.router.on 'route', @updateActiveNav
+    @listenTo app.router, 'route', @updateActiveNav
 
   updateActiveNav: (route) =>
     @$('.nav li').removeClass('active')
