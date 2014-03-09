@@ -1,9 +1,8 @@
-src/css/
-src/js/*
-!src/js/lib/
+bower_components/
 node_modules/
 build/
-test/*
-!test/index.html
-!test/runner.js
 npm-debug.log
+
+public/css/build.css
+
+src/js/jst.js

@@ -1,26 +1,23 @@
 {
   "name": "Click",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-  "dependencies": {
-    "requirejs": "latest"
+  "scripts": {
+    "start": "node_modules/.bin/grunt start"
   },
   "devDependencies": {
-    "mocha": "latest",
-    "chai": "latest",
-    "mocha-phantomjs": "latest",
-    "grunt": "0.3.x",
-    "grunt-coffee": "latest",
-    "grunt-compass": "latest",
-    "grunt-handlebars": "git://github.com/joesteele/grunt-handlebars#master",
-    "grunt-requirejs": "latest",
-    "grunt-mocha": "0.1.x",
-    "grunt-livereload": "latest"
-  },
-  "scripts": {
-    "mocha": "node_modules/mocha-phantomjs/bin/mocha-phantomjs test/index.html",
-    "grunt": "node_modules/grunt/bin/grunt",
-    "build": "node_modules/grunt/bin/grunt build",
-    "dev": "node_modules/grunt/bin/grunt dev"
+    "express": "~3.4.0",
+    "node-sass": "~0.8.1",
+    "browserify": "~2.34.1",
+    "debowerify": "~0.6.0",
+    "coffeeify": "~0.5.1",
+    "browserify-middleware": "~2.3.0",
+    "handlebars": "2.x",
+    "express3-handlebars": "~0.5.0",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.8",
+    "grunt-shell": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-concurrent": "~0.4.2"
   }
 }
