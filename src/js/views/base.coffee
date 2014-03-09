@@ -1,4 +1,10 @@
 class BaseView extends Backbone.View
+
+  constructor: ->
+    @children = []
+    @contentChildren = []
+    super
+
   render: =>
     @preRender?()
     @viewAttrs ?= @model?.toJSON() ? {}
@@ -93,10 +99,5 @@ class BaseView extends Backbone.View
   removeChild: (view) =>
     index = _.indexOf(@children, view)
     @children.splice(index, 1) if index isnt -1
-
-  constructor: ->
-    @children = []
-    @contentChildren = []
-    super
 
 module.exports = BaseView
